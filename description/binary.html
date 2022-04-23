@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+    <head>
+        
+        <title>Binary Semaphore</title>
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&display=swap" rel="stylesheet">  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+       
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link href="style.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+            <div class="container">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html">Back to Home</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+ 
+        <div class="container col-lg-12 col-sm-6 text-center">
+            <div>
+                <h1 class="text-uppercase text-white font-weight-bold" style="font-weight: bolder;">BINARY SEMAPHORE</h1>
+                <br><br><br>
+                <div class="hidden1" id="show">
+                    <div class="container" style="text-align: left;">
+                            <p class="text-white justify-content-left">
+                                Has 0 and 1 value.  The wait operation only works when the semaphore is 1 and the signal operation succeeds when semaphore is 0 <br>
+                                <h4 style="color: white; font-weight: bold;">Analysis of Binary Semaphore approach: </h4><br>
+                                <p style="color: white;"> 
+                                    1. A binary semaphore has two components-<br>
+                                    a.  An integer value which can be either 0 or 1.<br>
+                                    b.  An associated waiting list (usually a queue).<br>
+                                    <br>2. The waiting list of binary semaphore contains the processes that got blocked when trying to enter the critical section.<br>
+                                    <br>3. In waiting list, the blocked processes are put to sleep.<br>
+                                    <br>4. The waiting list is usually implemented using a queue data structure.
+                                    <br><br> 5. Using a queue as waiting list ensures bounded waiting.
+                                    <br><br>6. This is because the process which arrives first in the waiting queue gets the chance to enter the critical section first.
+                                    <br><br>7. The wait operation is executed when a process tries to enter the critical section.
+                                    <br><br>8. The signal operation is executed when a process takes exit from the critical section.
+                                    <br><br>9. Binary semaphores are mainly used for two purposes-
+                                    <br>a. To ensure mutual exclusion.
+                                    <br>b. To implement order in which the process must execute.
+                                </p>
+                            </p>
+                    </div>
+                </div>
+            </div>
+        <h3>
+            <a href="../binary_semaphore.html" class="button00" style="font-weight: bold;">Launch</a>
+        </h3>          
+    </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="app.js"></script>
+    </body>
+</html>

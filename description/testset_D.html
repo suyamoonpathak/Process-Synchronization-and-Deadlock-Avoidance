@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <!-- <meta name="description" content="" />
+        <meta name="author" content="" /> -->
+        <title>test set lock description</title>
+        <link rel = "icon" href = 
+        "../image/title_icon.jpeg" 
+                type = "image/x-icon">
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&display=swap" rel="stylesheet">  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <!-- <script src="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous"></script> -->
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <!-- Third party plugin CSS-->
+        <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" /> -->
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link href="style.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top"><i class="fas fa-home pr-3" aria-hidden="true"></i></i>OS Virtual Lab</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html">Home</a></li>
+                        
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#about">About</a></li>
+                        
+                        <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Services</a></li> -->
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#portfolio">Algorithms</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li> -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+ 
+        <div class="container col-lg-12 col-sm-6 text-center">
+            <div>
+                <h1 class="text-uppercase text-white font-weight-bold" style="font-weight: bolder;">TEST SET Lock</h1>
+                <br><br><br>
+                <div class="hidden1" id="show">
+                    <div class="container" style="text-align: left;">
+                        <p class="text-white justify-content-center">
+                            Synchronization mechanism- uses test and set instructions to provide the synchronization among the processes executing concurrently.
+                            <h4 style="color: white; font-weight: bold;">Analysis of Test And Set Lock: </h4><br>
+                            <p style="color: white;"> 
+                                Mutual Exclusion: <br>
+                                Mutual Exclusion is guaranteed in TSL mechanism since a process can never be preempted just before setting the lock variable. Only one process can see the lock variable as 0 at a particular time and that's why, the mutual exclusion is guaranteed. <br><br>
+                                Progress: <br>
+                                According to the definition of the progress, a process which doesn't want to enter in the critical section should not stop other processes to get into it. In TSL mechanism, a process will execute the TSL instruction only when it wants to get into the critical section. The value of the lock will always be 0 if no process doesn't want to enter into the critical section hence the progress is always guaranteed in TSL. <br><br>
+
+                                Bounded Waiting: <br>
+                                Bounded Waiting is not guaranteed in TSL. Some process might not get a chance for so long. We cannot predict for a process that it will definitely get a chance to enter in critical section after a certain time. <br><br>
+
+                                Architectural Neutrality: <br>
+                                TSL doesn't provide Architectural Neutrality. It depends on the hardware platform. The TSL instruction is provided by the operating system. Some platforms might not provide that. Hence it is not Architectural natural. <br><br>
+                            </p>
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+            <h3>
+                <a href="../test_set.html" class="button00" style="font-weight: bold;">Demo</a>
+            </h3>
+            <h3 class="text-uppercase text-white font-weight-bold py-3">Steps</h3>
+            <div class="row">
+                <div class="col-md-6 ">
+                    <img src="./img/testsetin.jpg" class="img-fluid" alt="Lights" style="width:100%">
+                </div>
+                <div class="col-md-6 " style="margin-top: 10%;">
+                    <h3 class="text-uppercase text-white font-weight-bold text-center pb-3" style="font-weight: bolder;">Input</h3> 
+                    <p style="color: white;">
+                        Enter the number of process required and that will be shown in the added state.<br><br>
+                        For processing the process further click on the respective process and that will be added to the new state according to the algorithm or alert will be shown. 
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6" style="margin-top: 10%;">
+                    <h3 class="text-uppercase text-white font-weight-bold text-center pb-3" style="font-weight: bolder;">Output</h3> 
+                    <p style="color: white;">
+                        The output will be according to the user input on the respective process for different states. 
+                    </p>
+                    <p style="color: white;">
+                        The lock state is shown above the added state according to the process in the critical state. 
+                    </p>
+                </div>
+                <div class="col-md-6">
+                        <img src="./img/testsetout.jpg" class="img-fluid" alt="Lights" style="width:100%"> 
+                </div>
+            </div>
+        </div>        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="app.js"></script>
+    </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+    <head>
+        
+        <title>Bankers Algorithm</title>
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&display=swap" rel="stylesheet">  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link href="style.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+            <div class="container">
+                
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html">Back to Home</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+ 
+        <div class="container col-lg-12 col-sm-6 text-center">
+                <h1 class="text-uppercase text-white font-weight-bold" style="font-weight: bolder;">BANKER'S ALGORITHM</h1><br><br><br>
+                <div class="hidden1" id="show">
+                    <div class="container" style="text-align: left;">
+                        <p class="text-white justify-content-center">
+                            The banker's algorithm is a resource allocation and deadlock avoidance algorithm that tests for safety by simulating the allocation for predetermined maximum possible amounts of all resources, then makes an "s-state" check to test for possible activities, before deciding whether allocation should be allowed to continue.<br>
+                            
+                            <h4 style="color: white; font-weight: bold;">Why Banker's algorithm is named so?  </h4><br>
+                            <p style="color: white;"> 
+                                Banker's algorithm is named so because it is used in banking system to check whether loan can be sanctioned to a person or not. Suppose there are n number of account holders in a bank and the total sum of their money is S. If a person applies for a loan then the bank first subtracts the loan amount from the total money that bank has and if the remaining amount is greater than S then only the loan is sanctioned. It is done because if all the account holders comes to withdraw their money then the bank can easily do it.
+                                In other words, the bank would never allocate its money in such a way that it can no longer satisfy the needs of all its customers. The bank would try to be in safe state always.
+                            </p>
+
+                            <h4 style="color: white; font-weight: bold;">Characteristics of Banker's Algorithm: </h4><br>
+                            <p style="color: white;"> 
+                                1. Keep many resources that satisfy the requirement of at least one client <br> 
+                                2. Whenever a process gets all its resources, it needs to return them in a restricted period. <br>
+                                3. When a process requests a resource, it needs to wait <br>
+                                4. The system has a limited number of resources <br>
+                                5. Advance feature for max resource allocation <br>
+                            </p>
+                            <h4 style="color: white; font-weight: bold;">Disadvantage of Banker's algorithm:</h4><br>
+                            <p style="color: white;">
+                                1. Does not allow the process to change its Maximum need while processing  <br>
+                                2. It allows all requests to be granted in restricted time, but one year is a fixed period for that. <br>
+                                3. All processes must know and state their maximum resource needs in advance. <br>
+                            </p>
+                        </p>
+                    </div>
+                </div>
+                <h3>
+                    <a href="../banker.html" class="button00" style="font-weight: bold;">Launch</a>
+                </h3>
+        </div>        
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="app.js"></script>
+    </body>
+</html>
